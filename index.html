@@ -15,8 +15,8 @@
 
   <!-- Custom Fonts -->
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet"
-    type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic"
+    rel="stylesheet" type="text/css">
   <link href="vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
 
   <!-- Custom CSS -->
@@ -35,17 +35,36 @@
     #page-top>header>div.container.text-center.my-auto>h3 {
       color: #35d15a;
     }
-    .parallax { 
-    /* The image used */
-    /* Set a specific height */
-    /*height: 500px;*/ 
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    .parallax {
+      /* The image used */
+      /* Set a specific height */
+      /*height: 500px;*/
+
+      /* Create the parallax scrolling effect */
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .carousel-caption {
+      background-color: rgba(0, 0, 0, 0.725);
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+
+      color: #050000;
+
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-prev:focus,
+    .carousel-control-next:hover,
+    .carousel-control-next:focus {
+      color: #020000;
+    }
   </style>
 
 </head>
@@ -101,9 +120,12 @@
         <div class="col-lg-10 mx-auto">
           <h2>Une brève présentation</h2>
           <p class="lead mb-7">
-            Depuis 2011, je travaille dans la programmation informatique, la création d'applications mobiles, le web front-end / back-end
-            et à peu près tout le reste. Les langages que j'utilise souvent sont PHP, HTML5, CSS3,Typescript ,JavaScript (jQuery, Angular.js,
-            Node.js) et SQL. Certains de mes outils de conception graphique les plus utilisés comprennent Adobe Photoshop,
+            Depuis 2011, je travaille dans la programmation informatique, la création d'applications mobiles, le web
+            front-end / back-end
+            et à peu près tout le reste. Les langages que j'utilise souvent sont PHP, HTML5, CSS3,Typescript ,JavaScript
+            (jQuery, Angular.js,
+            Node.js) et SQL. Certains de mes outils de conception graphique les plus utilisés comprennent Adobe
+            Photoshop,
             Adobe After Effects.
           </p>
           <a class="btn btn-dark btn-xl js-scroll-trigger" href="#services">Mes compétences...</a>
@@ -121,61 +143,56 @@
       </div>
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <img src="img/angular.png" class="rounded-circle">
+          <img src="img/flutter.png" height="250" width="250" class="rounded">
           <h4>
-            <strong>Angular JS et TS</strong>
+            <strong>Flutter SDK</strong>
           </h4>
-          <p class="text-faded mb-0">Un framework Javascript très répandu.</p>
+          <p class="text-faded mb-0">Le framework de developement mobile cross-platform de Google</p>
         </div>
+
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <img src="img/ionic.png" class="rounded-circle">
+          <img src="img/git.png" class="rounded" width="250" height="250">
           <h4>
-            <strong>Ionic Framework</strong>
+            <strong>Git</strong>
           </h4>
-          <p class="text-faded mb-0">Framework de developement hybride d'application mobile</p>
+          <p class="text-faded mb-0">l'outil de versioning,utile pour les développeurs</p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-            <img src="img/laravel.png" class="rounded-circle">
-          <h4>
-            <strong>Laravel</strong>
-          </h4>
-          <p class="text-faded mb-0">Le meilleur framework PHP d'après le site :<a class="btn btn-warning" href="https://coderseye.com/best-php-frameworks-for-web-developers/">coderseye.com</a></p>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <img src="img/git.png" class="rounded-circle" width="250" height="250">
-        <h4>
-          <strong>Git</strong>
-        </h4>
-        <p class="text-faded mb-0">l'outil de versioning,utile pour les développeurs</p>
-      </div>
         <div class="col-lg-3 col-md-6">
-            <img src="img/bootstrap.png" class="rounded-circle">
+          <img src="img/bootstrap.png" height="250" width="250" class="rounded">
           <h4>
             <strong>Bootstrap 4+</strong>
           </h4>
           <p class="text-faded mb-0">Le framework CSS par excellence.</p>
         </div>
         <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-          <img src="img/linux.png" class="rounded-circle" width="250" height="250">
-        <h4>
-          <strong>Linux</strong>
-        </h4>
-        <p class="text-faded mb-0">Système d'exploitation conçut pour les codeurs.</p>
-      </div>
-      <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-        <img src="img/mongo-db.png" class="rounded" width="250" height="250">
-      <h4>
-        <strong>Mongo DB</strong>
-      </h4>
-      <p class="text-faded mb-0">SGBD NoSQL</p>
-    </div>
-    <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-      <img src="img/python.png" class="rounded" width="250" height="250">
-    <h4>
-      <strong>Python</strong>
-    </h4>
-    <p class="text-faded mb-0">Langage de programmation orienté objet très puissant</p>
-  </div>
+          <img src="img/django.png" class="rounded" width="250" height="250">
+          <h4>
+            <strong>Django</strong>
+          </h4>
+          <p class="text-faded mb-0">Le framework Python le plus puissant pour développer des application Web robustes
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <img src="img/python.png" class="rounded" width="250" height="250">
+          <h4>
+            <strong>Python</strong>
+          </h4>
+          <p class="text-faded mb-0">Langage de programmation orienté objet très puissant</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <img src="img/laravel.png" height="250" width="250" class="rounded">
+          <h4>
+            <strong>Laravel</strong>
+          </h4>
+          <p class="text-faded mb-0">Le meilleur framework PHP pour créer des applications Web</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
+          <img src="img/docker.png" height="250" width="250" class="rounded">
+          <h4>
+            <strong>Docker</strong>
+          </h4>
+          <p class="text-faded mb-0">Un outil de déploiement de conteneurs pour les développeurs</p>
+        </div>
       </div>
     </div>
   </section>
@@ -195,50 +212,238 @@
         <h3 class="text-secondary mb-0">Mes projets</h3>
         <h2 class="mb-5">Projets Recents</h2>
       </div>
-      <div class="row no-gutters">
+      <div class="row space-evenly">
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Zouglou Mobile</h2>
-                <p class="mb-0">Une Application Mobile couplée à une Application web (Pas encore sur le store mais version de test telechargeable ici: <strong>https://files.fm/f/xpqkm7t9</strong>)</p>
-              </span>
+          <span class="card border-light mb-3">
+            <span class="card-body">
+              <h2>Sira Mobile</h2>
+              <h6 class="card-subtitle mb-2 text-muted">Une Application Mobile en Flutter couplée à une Application web
+                en Django (Sira Base)les deux
+                communiquant via API REST.</h6>
+              <p><a href="https://files.fm/u/3w3z4n6bd5">Fichier installable
+                  APK</a></p>
             </span>
-            <img class="img-fluid" src="img/portfolio/zouglou.png" alt="">
-          </a>
+          </span>
+          <div id="sira-mobile" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#sira-mobile" data-slide-to="0" class="active"></li>
+              <li data-target="#sira-mobile" data-slide-to="1"></li>
+              <li data-target="#sira-mobile" data-slide-to="2"></li>
+              <li data-target="#sira-mobile" data-slide-to="3"></li>
+              <li data-target="#sira-mobile" data-slide-to="4"></li>
+              <li data-target="#sira-mobile" data-slide-to="5"></li>
+              <li data-target="#sira-mobile" data-slide-to="6"></li>
+              <li data-target="#sira-mobile" data-slide-to="7"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/portfolio/sira-mobile/login.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Connexion</h5>
+                  <p>Vous entrez vos identifiants et vous vous connectez</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/config.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Configuration 1</h5>
+                  <p>Configurer un moyen d'authenfication locale via FaceID, Schema ou mot de passe</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/config-2.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Configuration 2</h5>
+                  <p>Récupèration depuis le serveur de configuration des projets de l'untilisateur courant</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/home.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Accueil</h5>
+                  <p>Page affichant les projets de l'utilisateur courant</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/indicator.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Indicateurs de projet</h5>
+                  <p>Page d'affichage des indicateurs de projet</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/indicator-form.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Formulaire d'indicateurs de projet</h5>
+                  <p>Renseigner les valeurs de l'indicatuer</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/indicator-details.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Détails d'indicateurs de projet</h5>
+                  <p>Affiche la liste des informations saisie pour un indicateur</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/sira-mobile/sync.jpg" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Synchronisation</h5>
+                  <p>Envoi des valeurs saisie vers le serveur Sira Base</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#sira-mobile" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#sira-mobile" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
         </div>
+
         <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>E-ticketing (https://www.eticketing.ci)</h2>
-                <p class="mb-0">Une plateforme de billeterie en ligne avec reception de ticket par sms...<br><strong>NB: version en cours de developement</strong></p>
-              </span>
+          <span class="card border-light mb-3">
+            <span class="card-body">
+              <h2>Kiwi VOD</h2>
+              <h6 class="card-subtitle mb-2 text-muted">Une Application Mobile en Flutter dédiée à la VOD. Elle propose
+                aussi du livestream et le téléchargement de contenu.</h6>
+              <p><a href="https://play.google.com/store/apps/details?id=com.release.kiwi">Lien PlayStore</a></p>
             </span>
-            <img class="img-fluid" src="img/portfolio/eticketing.png" alt="">
-          </a>
+          </span>
+          <div id="kiwi" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#kiwi" data-slide-to="0" class="active"></li>
+              <li data-target="#kiwi" data-slide-to="1"></li>
+              <li data-target="#kiwi" data-slide-to="2"></li>
+              <li data-target="#kiwi" data-slide-to="3"></li>
+              <li data-target="#kiwi" data-slide-to="4"></li>
+              <li data-target="#kiwi" data-slide-to="5"></li>
+              <li data-target="#kiwi" data-slide-to="6"></li>
+              <li data-target="#kiwi" data-slide-to="7"></li>
+              <li data-target="#kiwi" data-slide-to="8"></li>
+              <li data-target="#kiwi" data-slide-to="9"></li>
+              <li data-target="#kiwi" data-slide-to="10"></li>
+              <li data-target="#kiwi" data-slide-to="11"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/portfolio/kiwi/splash.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Splash Screen</h5>
+                  <p>Écran d'initialisation de l'application</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/home-one.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Acceuil 1</h5>
+                  <p>Page d'accueil utilisateur non connecté</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/home-two.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Accueil 1</h5>
+                  <p>Page d'accueil utilisateur non connecté du bas</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/login.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Connexion</h5>
+                  <p>Page de connexion utilisateur</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/home-connected.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Accueil 2</h5>
+                  <p>Page d'accueil utilisateur connecté</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/account.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Compte</h5>
+                  <p>Page de gestion du compte utilisateur</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/movie-details.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Details d'un film</h5>
+                  <p>Page de détails d'un film</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/program-details.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Details d'un programme</h5>
+                  <p>Page de détails d'un programme</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/live.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Live TV</h5>
+                  <p>Page des chaînes en direct</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/download-episode.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>téléchargement</h5>
+                  <p>téléchargement d'un épisode d'un programme</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/download-page.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>téléchargements</h5>
+                  <p>Page de gestion des téléchargements </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/portfolio/kiwi/purchase-history.png" height="900" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Historique</h5>
+                  <p>Page de consultation de l'historique de vos achats</p>
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#kiwi" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#kiwi" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
         </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Axe etude (http://www.axeetudes.net)</h2>
-                <p class="mb-0">Un annuaire numérique pour les établissements de Côte d'ivoire</p>
-              </span>
+
+        <div class="col-lg-12">
+          <span class="card border-light mb-3">
+            <span class="card-body">
+              <h2>Sira Base </h2>
+              <h6 class="card-subtitle mb-2 text-muted">Une Application Web en Django pour le rapportage d'indicateurs,
+                suivi et évaluation de projets pour Alliance CIV exposant une API REST pour l'application mobile Sira
+                Mobile</h6>
+              <p>
+                <a href="https://sira-alliance.alwaysdata.net/configuration/index/">version en cours de developement
+                  avec les 1ers
+                  modules
+                  livrés</a>
+              </p>
             </span>
-            <img class="img-fluid" src="img/portfolio/axeetudes.png" alt="">
-          </a>
-        </div>
-        <div class="col-lg-6">
-          <a class="portfolio-item" href="#">
-            <span class="caption">
-              <span class="caption-content">
-                <h2>Faiza (http://www.faiza.co.ci)</h2>
-                <p class="mb-0">Un site web de présentation d'entreprise.</p>
-              </span>
-            </span>
-            <img class="img-fluid" src="img/portfolio/faiza.png" alt="">
-          </a>
+          </span>
+          <img class="img-fluid" src="img/portfolio/sira-base/sira-base.png" alt="">
+
         </div>
       </div>
     </div>
@@ -248,7 +453,7 @@
   <section class="content-section bg-primary text-white">
     <div class="container text-center">
       <h2 class="mb-4">Ces informations sont insuffisantes pour vous?</h2>
-      <a href="doc/CV.docx" class="btn btn-xl btn-dark">Telecharger mon CV!</a>
+      <a href="doc/CV-FR.pdf" class="btn btn-xl btn-dark">Telecharger mon CV!</a>
     </div>
   </section>
 
