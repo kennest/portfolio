@@ -70,21 +70,29 @@
       color: #020000;
     }
 
-    .jumbotron {
+    #particles-js {
+      position: relative;
+      border: 1px solid #ccc;
+      /* Just for visualization */
+    }
+
+    .message {
       padding: 2rem 1rem;
       margin-bottom: 2rem;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: .3rem;
-      /*position: absolute;
-      top: 30%;
-      left: 20%;*/
-
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   </style>
 
 </head>
 
 <body id="page-top">
+
+
   <!-- Navigation -->
   <a class="menu-toggle rounded" href="#">
     <i class="fa fa-bars"></i>
@@ -117,8 +125,8 @@
 
 
   <!-- Header -->
-  <header class="masthead d-flex parallax">
-    <div class="container text-center my-auto jumbotron">
+  <header class="masthead d-flex parallax" id="particles-js">
+    <div class="container text-center my-auto message">
       <h2 class="mb-1"><strong>Bonjour, je suis Oulai Kennest Davis</strong></h2>
       <h1 class="mb-5">Développeur Web/Mobile</h1>
       <h4 class="mb-4 text-warning">Expert Flutter | Senior Django</h4>
@@ -636,7 +644,8 @@
       <p>&nbsp;</p>
       <div class="row">
         <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
-          <iframe src="https://kennest.github.io/portfolio/doc/certification-django.pdf" width="100%" height="800px">
+          <iframe contenteditable="false" src="https://kennest.github.io/portfolio/doc/certification-django.pdf"
+            width="100%" height="800px">
           </iframe>
         </div>
         <div class="col-lg-6 col-md-12 mb-5 mb-lg-0">
