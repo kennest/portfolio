@@ -69,6 +69,13 @@
     .carousel-control-next:focus {
       color: #020000;
     }
+
+    .jumbotron {
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: .3rem;
+    }
   </style>
 
 </head>
@@ -104,9 +111,10 @@
     </ul>
   </nav>
 
+
   <!-- Header -->
   <header class="masthead d-flex parallax">
-    <div class="container text-center my-auto">
+    <div class="container text-center my-auto jumbotron">
       <h2 class="mb-1"><strong>Bonjour, je suis Oulai Kennest Davis</strong></h2>
       <h1 class="mb-5">Développeur Web/Mobile</h1>
       <h4 class="mb-4 text-warning">Expert Flutter | Senior Django</h4>
@@ -678,10 +686,17 @@
 
   <!-- Plugin JavaScript -->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"
+    integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
-
+  <script>
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
 </body>
 
 </html>
