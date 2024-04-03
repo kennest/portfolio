@@ -78,13 +78,26 @@
 
     .message {
       padding: 2rem 1rem;
-      margin-bottom: 2rem;
       background-color: rgba(0, 0, 0, 0.5);
       border-radius: .3rem;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    #flutter {
+      position: absolute;
+      bottom: 10%;
+      right: -20%;
+      z-index: 100;
+    }
+
+    #python {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      z-index: 100;
     }
   </style>
 
@@ -126,6 +139,15 @@
 
   <!-- Header -->
   <header class="masthead d-flex parallax" id="particles-js">
+    <div id="python">
+      <lottie-player src="https://lottie.host/b6b38648-d3a8-4e79-9765-1eb599e20792/JW43RNWDwo.json" background="##fff"
+        speed="1" style="width: 300px; height: 300px" loop autoplay direction="1" mode="normal"></lottie-player>
+    </div>
+    <div id="flutter">
+      <lottie-player src="https://lottie.host/869eebba-3c82-4911-acc5-f49a50a6e095/0f1eB0Ccqj.json"
+        background="##FFFFFF" speed="1" style="width: 40%; height: 40%" loop autoplay direction="1"
+        mode="normal"></lottie-player>
+    </div>
     <div class="container text-center my-auto message">
       <h2 class="mb-1"><strong>Bonjour, je suis Oulai Kennest Davis</strong></h2>
       <h1 class="mb-5">Développeur Web/Mobile</h1>
@@ -709,6 +731,7 @@
 
   <!-- Custom scripts for this template -->
   <script src="js/stylish-portfolio.min.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script>
     particlesJS.load('particles-js', 'assets/particles.json', function () {
       console.log('callback - particles.js config loaded');
