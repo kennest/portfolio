@@ -1,7 +1,7 @@
 <?php
 
 // TODO: Remplacer par votre adresse de réception
-$to = 'demo@demo.com';
+$to = 'oulai.davis.pro@gmail.com';
 
 // Récupération sécurisée des champs
 $name    = isset($_POST['name']) ? trim($_POST['name']) : '';
