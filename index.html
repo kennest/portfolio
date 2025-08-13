@@ -34,6 +34,35 @@
       object-position: center top;
       display: block;
     }
+
+    /* Sous-titres des groupes de projets */
+    .st-portfolio-subtitle {
+      font-size: 24px;
+      font-weight: 600;
+      margin: 5px 0 28px;
+      position: relative;
+      letter-spacing: .5px;
+    }
+
+    .st-portfolio-subtitle span {
+      color: #fec544;
+    }
+
+    .st-portfolio-subtitle:after {
+      content: '';
+      display: block;
+      width: 70px;
+      height: 3px;
+      background: #fec544;
+      margin-top: 10px;
+    }
+
+    @media (max-width:767.98px) {
+      .st-portfolio-subtitle {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
+    }
   </style>
 </head>
 
@@ -96,6 +125,11 @@
       <div class="st-height-b25 st-height-lg-b25"></div>
     </div>
     <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="st-portfolio-subtitle">Projets <span>Mobiles</span></h3>
+        </div>
+      </div>
       <div class="row">
         <div class="col-lg-6 wow fadeInLeft">
           <div class="st-about-img-wrap">
@@ -568,6 +602,11 @@
     </div>
     <div class="container">
       <div class="row">
+        <div class="col-12">
+          <h3 class="st-portfolio-subtitle">Applications <span>Mobile</span></h3>
+        </div>
+      </div>
+      <div class="row">
 
         <div class="col-lg-4 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery mobile-preview">
@@ -617,7 +656,36 @@
             </div>
           </div>
         </div>
+        <!-- Inspecto screens (mobile) -->
         <div class="col-lg-4 col-md-6">
+          <div class="st-portfolio-single st-style1 st-lightgallery mobile-preview">
+            <div class="st-portfolio-item">
+              <a href="assets/img/portfolio/Inspecto/home.png" class="st-portfolio st-zoom st-lightbox-item"
+                data-sub-html="<h4>Inspecto – Accueil</h4><p>Flutter • Dashboard</p>">
+                <div class="st-portfolio-img st-zoom-in">
+                  <img src="assets/img/portfolio/Inspecto/home.png" alt="Inspecto Accueil">
+                </div>
+                <div class="st-portfolio-item-hover">
+                  <i class="fas fa-plus-circle"></i>
+                  <h5>Inspecto</h5>
+                  <p>Dashboard</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="st-height-b50 st-height-lg-b50"></div>
+      <div class="row">
+        <div class="col-12">
+          <h3 class="st-portfolio-subtitle">Applications <span>Web</span></h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
               <a href="assets/img/portfolio/sira-base/sira-base.png" class="st-portfolio st-zoom st-lightbox-item">
@@ -633,7 +701,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div class="col-lg-6 col-md-6">
           <div class="st-portfolio-single st-style1 st-lightgallery">
             <div class="st-portfolio-item">
               <a href="assets/img/portfolio/verithese-v2/web-dashboard.png"
@@ -650,7 +718,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div class="st-height-b100 st-height-lg-b80"></div>
