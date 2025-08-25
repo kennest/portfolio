@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="../assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="../assets/css/animate.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .st-slider.project-mobile .slick-slide-in {display:flex;justify-content:center;}
+    .st-slider.project-mobile .slick-slide-in img{width:450px;height:700px;object-fit:cover;max-width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.25);}
+    @media (max-width:600px){
+      .st-slider.project-mobile .slick-slide-in img{width:260px;height:400px;}
+    }
+  </style>
 </head>
 <body>
   <header class="st-site-header st-style1 st-sticky-header">
@@ -68,14 +75,25 @@
               <li>Gestion multi-profils</li>
               <li>Exports CSV/PDF</li>
             </ul>
-            <h2>Captures</h2>
-            <div class="st-slider st-style1">
-              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
+            <h2>Galerie</h2>
+            <div class="st-slider st-style1 project-mobile">
+              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="700" data-center="0" data-slides-per-view="1">
                 <div class="slick-wrapper">
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/login.jpg" alt="login" /></div>
                   <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/home.jpg" alt="home" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/indicator.jpg" alt="indicator" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/indicator_data.jpg" alt="indicator_data" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/indicator_data_form.jpg" alt="indicator_data_form" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/configuration_project_data.jpg" alt="configuration_project_data" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/configuration_security.jpg" alt="configuration_security" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/sira-mobile-v2/sync.jpg" alt="sync" /></div>
                 </div>
               </div>
               <div class="pagination st-style2"></div>
+              <div class="swipe-arrow st-style1 st-hidden">
+                <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+                <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+              </div>
             </div>
             <div class="st-height-b40 st-height-lg-b30"></div>
             <h2>Résultats</h2>

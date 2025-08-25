@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="../assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="../assets/css/animate.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .st-slider.project-mobile .slick-slide-in {display:flex;justify-content:center;}
+    .st-slider.project-mobile .slick-slide-in img{width:450px;height:700px;object-fit:cover;max-width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.25);}
+    @media (max-width:600px){
+      .st-slider.project-mobile .slick-slide-in img{width:260px;height:400px;}
+    }
+  </style>
 </head>
 <body>
   <header class="st-site-header st-style1 st-sticky-header">
@@ -69,14 +76,31 @@
               <li>Notifications ciblées</li>
               <li>Statistiques d'usage</li>
             </ul>
-            <h2>Captures</h2>
-            <div class="st-slider st-style1">
-              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
+            <h2>Galerie</h2>
+            <div class="st-slider st-style1 project-mobile">
+              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="700" data-center="0" data-slides-per-view="1">
                 <div class="slick-wrapper">
-                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/home-connected.png" alt="home" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/splash.png" alt="splash" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/login.png" alt="login" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/home-one.png" alt="home-one" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/home-two.png" alt="home-two" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/home-connected.png" alt="home-connected" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/sidebar.png" alt="sidebar" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/collection.png" alt="collection" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/movie-details.png" alt="movie-details" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/program-details.png" alt="program-details" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/live.png" alt="live" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/download-page.png" alt="download-page" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/download-episode.png" alt="download-episode" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/purchase-history.png" alt="purchase-history" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/kiwi/account.png" alt="account" /></div>
                 </div>
               </div>
               <div class="pagination st-style2"></div>
+              <div class="swipe-arrow st-style1 st-hidden">
+                <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+                <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+              </div>
             </div>
             <div class="st-height-b40 st-height-lg-b30"></div>
             <h2>Impact</h2>

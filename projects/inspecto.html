@@ -12,6 +12,13 @@
   <link rel="stylesheet" href="../assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="../assets/css/animate.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    .st-slider.project-mobile .slick-slide-in {display:flex;justify-content:center;}
+    .st-slider.project-mobile .slick-slide-in img{width:450px;height:700px;object-fit:cover;max-width:100%;border-radius:12px;box-shadow:0 4px 16px rgba(0,0,0,.25);}
+    @media (max-width:600px){
+      .st-slider.project-mobile .slick-slide-in img{width:260px;height:400px;}
+    }
+  </style>
 </head>
 <body>
   <header class="st-site-header st-style1 st-sticky-header">
@@ -68,14 +75,27 @@
               <li>Upload multi-images compressé</li>
               <li>Export PDF horodaté</li>
             </ul>
-            <h2>Captures</h2>
-            <div class="st-slider st-style1">
-              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="800" data-center="0" data-slides-per-view="1">
+            <h2>Galerie</h2>
+            <div class="st-slider st-style1 project-mobile">
+              <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="700" data-center="0" data-slides-per-view="1">
                 <div class="slick-wrapper">
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/login.png" alt="login" /></div>
                   <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/home.png" alt="home" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/projects.png" alt="projects" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/inspection.png" alt="inspection" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/non_conformities.png" alt="non_conformities" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/profile.png" alt="profile" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/document.PNG" alt="document" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/folder.PNG" alt="folder" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/meet_one.png" alt="meet_one" /></div>
+                  <div class="slick-slide-in"><img class="st-zoom-in" src="../assets/img/portfolio/Inspecto/meet_two.png" alt="meet_two" /></div>
                 </div>
               </div>
               <div class="pagination st-style2"></div>
+              <div class="swipe-arrow st-style1 st-hidden">
+                <div class="slick-arrow-left"><i class="fa fa-angle-left"></i></div>
+                <div class="slick-arrow-right"><i class="fa fa-angle-right"></i></div>
+              </div>
             </div>
             <div class="st-height-b40 st-height-lg-b30"></div>
             <h2>Résultats</h2>
