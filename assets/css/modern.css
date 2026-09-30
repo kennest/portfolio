@@ -1,0 +1,331 @@
+/* ============================================================
+   modern.css — Surcharge moderne (palette néon violet/cyan)
+   Chargée APRÈS style.css. Ne modifie aucun fichier existant.
+   ============================================================ */
+
+:root {
+  --neon-violet: #8b5cf6;
+  --neon-cyan: #22d3ee;
+  --neon-gradient: linear-gradient(90deg, #8b5cf6 0%, #22d3ee 100%);
+  --bg-deep: #07080f;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-border: rgba(139, 92, 246, 0.25);
+  --text-dim: #9aa3b2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------- Fond global deep space + lueurs ---------- */
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-dim);
+}
+
+.st-dark-bg {
+  background-color: #090b14;
+}
+
+/* ---------- Hero : dégradé radial néon + canvas 3D ---------- */
+.st-hero.st-style2 {
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(139, 92, 246, 0.18), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 80% 75%, rgba(34, 211, 238, 0.14), transparent 60%),
+    linear-gradient(180deg, #07080f 0%, #0b0d1a 60%, #07080f 100%);
+}
+
+#hero-3d-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.st-hero.st-style2 .container {
+  z-index: 11;
+}
+
+.st-hero.st-style2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 120px;
+  background: linear-gradient(180deg, transparent, var(--bg-deep));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* ---------- Texte néon (dégradé) ---------- */
+.st-hero.st-style2 h1 span,
+.st-text-block-title,
+.st-skill-title {
+  background: var(--neon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.st-hero.st-style2 h1 {
+  text-shadow: 0 0 60px rgba(139, 92, 246, 0.25);
+}
+
+/* ---------- Titres de section ---------- */
+.st-section-heading.st-style1 .st-section-heading-title {
+  background: var(--neon-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  letter-spacing: 2px;
+}
+
+.st-section-heading.st-style1 .st-section-heading-title::before {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.st-section-heading.st-style1 .st-section-heading-title::after {
+  background: var(--neon-gradient);
+  height: 3px;
+  border-radius: 2px;
+  box-shadow: 0 0 12px rgba(139, 92, 246, 0.6);
+}
+
+.st-section-heading.st-style1 .st-section-heading-subtitle {
+  color: rgba(139, 92, 246, 0.08);
+}
+
+/* ---------- Sous-titres de groupes (Projets Mobiles / Web) ---------- */
+.st-portfolio-subtitle span {
+  color: var(--neon-cyan);
+}
+
+.st-portfolio-subtitle::after {
+  background: var(--neon-gradient);
+  box-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+}
+
+/* ---------- Boutons néon ---------- */
+.st-btn.st-style1.st-color1 {
+  background: var(--neon-gradient);
+  color: #fff;
+  box-shadow: 0 4px 24px rgba(139, 92, 246, 0.35);
+}
+
+.st-btn.st-style1.st-color1:hover {
+  box-shadow: 0 6px 32px rgba(34, 211, 238, 0.45);
+  transform: translateY(-2px);
+}
+
+.st-btn.st-style2,
+.st-btn.st-style2.st-color1 {
+  border-color: rgba(139, 92, 246, 0.6);
+  color: var(--neon-cyan);
+  background: var(--bg-card);
+}
+
+.st-btn.st-style2:hover,
+.st-btn.st-style2.st-color1:hover {
+  background: rgba(139, 92, 246, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+}
+
+/* ---------- Glassmorphism : cartes compétences / iconbox ---------- */
+.st-iconbox.st-style1 {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: 18px;
+  padding: 32px 26px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.st-iconbox.st-style1:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.2);
+}
+
+.st-iconbox.st-style1:hover .st-iconbox-icon svg {
+  fill: var(--neon-cyan);
+}
+
+.st-iconbox.st-style1 .st-iconbox-icon svg {
+  fill: var(--neon-violet);
+  transition: fill 0.35s ease;
+}
+
+/* ---------- Barres de progression néon ---------- */
+.st-progressbar {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.st-progressbar .st-progressbar-in {
+  background: var(--neon-gradient) !important;
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.5);
+  border-radius: 50px;
+}
+
+/* ---------- Cartes projets (portfolio) ---------- */
+.st-portfolio {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  will-change: transform;
+}
+
+.st-portfolio:hover {
+  border-color: rgba(34, 211, 238, 0.45);
+  box-shadow: 0 16px 48px rgba(139, 92, 246, 0.28);
+}
+
+.st-portfolio::before {
+  background: linear-gradient(160deg, rgba(139, 92, 246, 0.85), rgba(34, 211, 238, 0.8)) !important;
+}
+
+.st-portfolio::after {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  border-radius: 12px;
+}
+
+.st-portfolio-item-hover i {
+  background: var(--neon-gradient);
+  color: #fff;
+  border: none;
+  opacity: 1;
+}
+
+/* Tilt 3D : conteneur de perspective */
+.st-portfolio-single {
+  transform-style: preserve-3d;
+  perspective: 900px;
+}
+
+.st-portfolio-single .st-portfolio {
+  transform-style: preserve-3d;
+}
+
+.st-portfolio-single .st-portfolio-img img {
+  transform: translateZ(0);
+}
+
+/* Reflet lumineux (glare) ajouté par tilt.js */
+.tilt-glare {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  border-radius: inherit;
+  background: radial-gradient(circle at var(--glare-x, 50%) var(--glare-y, 50%),
+      rgba(255, 255, 255, 0.22), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: screen;
+}
+
+.tilt-active .tilt-glare {
+  opacity: 1;
+}
+
+/* ---------- Liens sociaux ---------- */
+.st-hero-social-links .st-social-btn {
+  border-color: rgba(139, 92, 246, 0.35);
+  transition: all 0.35s ease;
+}
+
+.st-hero-social-links .st-social-btn:hover {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 18px rgba(34, 211, 238, 0.35);
+  transform: translateY(-3px);
+}
+
+/* ---------- Photo de profil ---------- */
+.st-hero.st-style2 .st-author {
+  border: 4px solid transparent;
+  background:
+    linear-gradient(#0b0d1a, #0b0d1a) padding-box,
+    var(--neon-gradient) border-box;
+  box-shadow: 0 0 40px rgba(139, 92, 246, 0.35);
+}
+
+/* ---------- Section CV / iframes certifications ---------- */
+.st-dark-bg iframe {
+  border-radius: 12px;
+  border: 1px solid var(--bg-card-border) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background: #05060c;
+  border-top: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.st-copyright-text {
+  color: #6b7280;
+}
+
+/* ---------- Header sticky ---------- */
+.st-sticky-header .st-main-header {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 8, 15, 0.75) !important;
+  border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+}
+
+.st-nav-list li a:hover {
+  color: var(--neon-cyan);
+}
+
+/* ---------- Divers ---------- */
+::selection {
+  background: rgba(139, 92, 246, 0.5);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07080f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #8b5cf6, #22d3ee);
+  border-radius: 5px;
+}
+
+strong {
+  color: #e5e9f0;
+}
+
+/* ---------- Accessibilité : réductions de mouvement ---------- */
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/modern.css" />
   <style>
     /* Uniformiser l'aperçu des projets mobiles (même ratio et recadrage) */
     .st-portfolio-single.mobile-preview .st-portfolio-img {
@@ -45,7 +46,7 @@
     }
 
     .st-portfolio-subtitle span {
-      color: #fec544;
+      color: var(--neon-cyan, #22d3ee);
     }
 
     .st-portfolio-subtitle:after {
@@ -53,7 +54,8 @@
       display: block;
       width: 70px;
       height: 3px;
-      background: #fec544;
+      border-radius: 2px;
+      background: linear-gradient(90deg, #8b5cf6, #22d3ee);
       margin-top: 10px;
     }
 
@@ -92,7 +94,8 @@
   <!-- End Header Section -->
 
   <!-- Start Hero Seciton -->
-  <section class="st-hero st-style2 st-bg st-dynamic-bg st-ripple-version" data-src='assets/img/hero-bg-1.jpg'>
+  <section class="st-hero st-style2">
+    <canvas id="hero-3d-canvas" aria-hidden="true"></canvas>
     <div class="container">
       <div class="st-hero-text">
         <div class="st-author"><img src="assets/img/me.png" alt=""></div>
@@ -811,6 +814,52 @@
   <script src="assets/js/wow.min.js"></script>
   <script src="assets/js/ripples.min.js"></script>
   <script src="assets/js/main.js"></script>
+  <!-- Modern 3D & animations -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="assets/js/tilt.js"></script>
+  <script type="module" src="assets/js/hero3d.js"></script>
+  <script>
+    // Animations d'apparition au scroll (GSAP ScrollTrigger)
+    (function () {
+      if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Titres de section
+      gsap.utils.toArray('.st-section-heading').forEach(function (el) {
+        gsap.from(el, {
+          opacity: 0,
+          y: 40,
+          duration: 0.9,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        });
+      });
+
+      // Cartes et blocs : apparition en cascade
+      gsap.utils.toArray('.st-iconbox, .st-portfolio-single, .st-text-block').forEach(function (el, i) {
+        gsap.from(el, {
+          opacity: 0,
+          y: 50,
+          duration: 0.8,
+          delay: (i % 3) * 0.12,
+          ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 88%' }
+        });
+      });
+
+      // Hero : entrée en douceur
+      gsap.from('.st-hero-text > *', {
+        opacity: 0,
+        y: 30,
+        duration: 1,
+        stagger: 0.15,
+        ease: 'power3.out',
+        delay: 0.2
+      });
+    })();
+  </script>
   <script>
     !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init Fe Us zs Oe js Ns capture Ze calculateEventProperties Hs register register_once register_for_session unregister unregister_for_session Js getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Gs qs createPersonProfile Vs As Ks opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing Bs debug L Ws getPageViewId captureTraceFeedback captureTraceMetric".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
     posthog.init('phc_Bqb3kzCOkJkSo2s2Z1xbmP2sR79oQpjAMGI1Hlodhgw', {
